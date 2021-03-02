@@ -1,5 +1,5 @@
 #// TODO: Do not hardcode values in later
-#// /py src/main/java/org/Eclient/client/module/modules/movement/2moduleatonce
+#// /py src/main/java/org/Eclient/client/module/modules/movement/speed
 import input as input;
 from mine import *;
 from mcpi.minecraft import *;

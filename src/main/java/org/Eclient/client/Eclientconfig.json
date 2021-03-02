@@ -17,6 +17,13 @@
         "Enabled": false,
         "Name": "Phase"
       },
+      "PlayerTracker": {
+        "PlayerTrackerFreq": 2,
+        "Bind": "None",
+        "Visible": "ON",
+        "Enabled": false,
+        "Name": "Phase"
+      },
       "Fastbreak": {
         "Bind": "None",
         "Visible": "ON",
