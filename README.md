@@ -50,3 +50,15 @@ class Main:
         if configs['module5']['Enabled'] == True:
             Thread(target = Module5.Main).start();
 ```
+
+All modules are required to have the command to run the module by itself, for example speed.py
+will have
+```
+#// /py src/main/java/org/Eclient/client/module/modules/movement/speed
+```
+At the top of the file
+
+
+
+Note: Scripts outside of the client that just display statistics (such as graph.py) will be written
+like normal python and will not have any command in the headers.

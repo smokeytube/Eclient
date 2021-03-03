@@ -24,6 +24,13 @@
         "Enabled": false,
         "Name": "Phase"
       },
+      "MovementLogger": {
+        "LoggingFreq": 0.1,
+        "Bind": "None",
+        "Visible": "ON",
+        "Enabled": false,
+        "Name": "Phase"
+      },
       "Fastbreak": {
         "Bind": "None",
         "Visible": "ON",
