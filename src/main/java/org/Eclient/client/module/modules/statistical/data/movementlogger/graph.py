@@ -25,28 +25,37 @@ x =[]
 y =[]
 z =[]
 
+nocoords = True
 
-with open('C:\\Users\\Zach\\AppData\\Roaming\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\\movementlogger\\'+'movementlogger.txt', 'r') as coordslist:
-    for line in coordslist:
-        coords = line.split(' ')
-        x.append(float(coords[0]))
-        y.append(float(coords[1]))
-        z.append(float(coords[2]))
-print (x)
-print (y)
-print (z)
+with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\\movementlogger\\'+'movementlogger.txt', 'r') as coordslist:
+    if nocoords:
+        first_line = coordslist.readline()
+        coords = first_line.split(' ')
+        xcanceloutcoord = abs(float(coords[0]))
+        zcanceloutcoord = abs(float(coords[2]))
+        for line in coordslist:
+            coords = line.split(' ')
+            x.append(float(coords[0])+xcanceloutcoord)
+            y.append(float(coords[1]))
+            z.append(float(coords[2])+zcanceloutcoord)
+    else:
+        for line in coordslist:
+            coords = line.split(' ')
+            x.append(float(coords[0]))
+            y.append(float(coords[1]))
+            z.append(float(coords[2]))
 
-# start, end = ax.get_xlim()
-# ax.xaxis.set_ticks(np.arange(start, end, 5))
-# ax.yaxis.set_ticks(np.arange(start, end, 5))
 
 ax.scatter(x, z, y, c='r', marker='o')
 
 minim = minmaxArr(x, z)[0]
 maxim = minmaxArr(x, z)[1]
 
+print (minim)
+print (maxim)
+
 ax.set_xlim(minim, maxim)
-ax.set_zlim(0, 256)
+ax.set_zlim(0, max(y))
 ax.set_ylim(minim, maxim)
 
 ax.set_xlabel('X Label')

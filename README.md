@@ -26,6 +26,8 @@ from module4 import module4 as module4;
 from module5 import module5 as module5;
 
 import json;
+import threading as Thread;
+import os;
 
 class Main:
     def loadconfig():
@@ -34,7 +36,7 @@ class Main:
 
     def Main():
         configs = Phase.loadconfig()['modules'];
-        Yspeed = configs['phaseamount'];
+
         if configs['module1']['Enabled'] == True:
             Thread(target = Module1.Main).start();
 

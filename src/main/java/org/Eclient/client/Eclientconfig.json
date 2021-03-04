@@ -3,12 +3,12 @@
       "modifiersEnabled": false
     },
     "modules": {
-      "Speed": {
-        "travelspeed": 0.2,
+      "MovementLogger": {
+        "LoggingFreq": 0.1,
         "Bind": "None",
         "Visible": "ON",
         "Enabled": false,
-        "Name": "Speed"
+        "Name": "Phase"
       },
       "Phase": {
         "phaseamount": 5,
@@ -24,18 +24,12 @@
         "Enabled": false,
         "Name": "Phase"
       },
-      "MovementLogger": {
-        "LoggingFreq": 0.1,
+      "Speed": {
+        "travelspeed": 0.2,
         "Bind": "None",
         "Visible": "ON",
         "Enabled": false,
-        "Name": "Phase"
-      },
-      "Fastbreak": {
-        "Bind": "None",
-        "Visible": "ON",
-        "Enabled": false,
-        "Name": "Fastbreak"
+        "Name": "Speed"
       }
     },
     "friends": {

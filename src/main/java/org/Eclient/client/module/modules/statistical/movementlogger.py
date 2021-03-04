@@ -35,7 +35,7 @@ class MovementLogger:
                 movelog = open('data\\movementlogger\\movementlogger.txt', 'a+');
 
             movelog.write('{} {} {}\n'.format(x, y, z));
-            mc.postToChat('{} {} {}\n'.format(x, y, z));
+            #mc.postToChat('{} {} {}\n'.format(x, y, z));
             movelogtimeout += 1;
 
             time.sleep(LoggerFreq);
