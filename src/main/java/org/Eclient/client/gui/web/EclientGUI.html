@@ -3,6 +3,7 @@
 <head>
 
 <title>Eclient</title>
+<link rel="icon" href="images/E.png"></link>
 
 <!--CSS-->
 <link rel="stylesheet" href="/css/EclientGUI.css">
@@ -13,16 +14,44 @@
 <script type='text/javascript' src='/eel.js'></script>
 
 <!--GUI Functions-->
-<script type='text/javascript'>
 
-async function togglemodule() {
+<script type='text/javascript'>
+//set button color on load
+async function loadmodules() {
     let module = document.getElementById('moduleinput').value;
-    let file_div = document.getElementById('moduletext');
+    
+    // Call into Python so we can access the file system
+    let moduledic = await eel.loadmodules()();
+    console.log(moduledic);
+}
+
+
+//toggle button colors
+
+//$Red1: #BC0000;
+//$Red2: #D81A1A;
+var toggle = false;
+function setColor(btn) {
+    var property = document.getElementById(btn);
+    if (toggle) {
+        property.style.backgroundColor = "#BC0000"
+        toggle = false;   
+    }
+    else {
+        property.style.backgroundColor = "#650b0b"
+        toggle = true;
+    }
+}
+
+//toggle modules
+async function togglemodule(btn, inputval) {
+    let module = document.getElementById(inputval).value;
     
     // Call into Python so we can access the file system
     let random_filename = await eel.togglemodule(module)();
-    file_div.innerHTML = random_filename;
+    setColor(btn)
 }
+
 
 </script>
 
@@ -31,35 +60,51 @@ async function togglemodule() {
 
 
 </head>
-<body onload="brython()">
+<body onload="brython(); loadmodules();">
 
 
 <div class="row">
     <div class="column statistical">
         <h2>Statistical</h2>
-        <form onsubmit="togglemodule(); return false;" >
-            <input id='moduleinput' type="hidden" value='Phase'/>
-            <button class="EclientButton" type="submit">Phase</button>
+
+        <form onsubmit="togglemodule('MovementLoggertoggle', 'MovementLogger'); return false;" >
+            <input id='MovementLogger' type="hidden" value='MovementLogger'/>
+            <button class="EclientButton" id="MovementLoggertoggle" type="submit">MovementLogger</button>
         </form>
-        <div id='moduletext'>---</div>
+
     </div>
 
 
     <div class="column miscellaneous">
         <h2>Miscellaneous</h2>
-        <button class="EclientButton">Button</button>
+
+        <form onsubmit="togglemodule('PlayerTrackertoggle', 'PlayerTracker'); return false;" >
+            <input id='PlayerTracker' type="hidden" value='PlayerTracker'/>
+            <button class="EclientButton" id="PlayerTrackertoggle" type="submit">PlayerTracker</button>
+        </form>
+    
     </div>
 
 
     <div class="column movement">
         <h2>Movement</h2>
-        <button class="EclientButton">Button</button>
+
+        <form onsubmit="togglemodule('Phasetoggle', 'Phase'); return false;" >
+            <input id='Phase' type="hidden" value='Phase'/>
+            <button class="EclientButton" id="Phasetoggle" type="submit">Phase</button>
+        </form>
+
+        <form onsubmit="togglemodule('Speedtoggle', 'Speed'); return false;" >
+            <input id='Speed' type="hidden" value='Speed'/>
+            <button class="EclientButton" id="Speedtoggle" type="submit">Speed</button>
+        </form>
+
     </div>
 
 
     <div class="column chat">
         <h2>Chat</h2>
-        <button class="EclientButton">Button</button>
+        
     </div>
 
 

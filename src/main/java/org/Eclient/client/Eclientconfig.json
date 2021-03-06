@@ -7,7 +7,7 @@
       "LoggingFreq": 0.1,
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "Phase"
     },
     "Phase": {
@@ -21,14 +21,14 @@
       "PlayerTrackerFreq": 2,
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "Phase"
     },
     "Speed": {
       "travelspeed": 0.2,
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "Speed"
     }
   },

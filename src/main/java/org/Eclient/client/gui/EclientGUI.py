@@ -17,5 +17,14 @@ def togglemodule(modulenm):
         json.dump(json_data, configs, indent=2)
         return str(isenabled)
 
+@eel.expose
+def loadmodules():
+    with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json', 'r') as configpath:
+        json_data = json.load(configpath)
+
+        modulearr = {}
+        for module in json_data['modules']:
+            modulearr[str(module)] = str(json_data['modules'][module]['Enabled'])
+        return modulearr
 
 eel.start('EclientGUI.html')
