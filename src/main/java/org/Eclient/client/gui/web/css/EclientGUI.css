@@ -1,0 +1,54 @@
+/* Color Pallette */
+/* Margins and Padding */
+/* Opacity */
+body {
+  background-image: url("../images/E.png");
+  background-color: #CCCCCC;
+  min-height: 1000000000px; }
+
+.column {
+  float: left; }
+
+.statistical {
+  width: 20%;
+  background-color: #CCCCCC;
+  opacity: 0.9;
+  margin: 50px;
+  padding: 20px; }
+
+.miscellaneous {
+  width: 20%;
+  background-color: #CCCCCC;
+  opacity: 0.9;
+  margin: 50px;
+  padding: 20px; }
+
+.movement {
+  width: 20%;
+  background-color: #CCCCCC;
+  opacity: 0.9;
+  margin: 50px;
+  padding: 20px; }
+
+.chat {
+  width: 20%;
+  background-color: #CCCCCC;
+  opacity: 0.9;
+  margin: 50px;
+  padding: 20px; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.EclientButton {
+  background-color: #BC0000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; }

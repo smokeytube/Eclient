@@ -1,0 +1,77 @@
+/* Color Pallette */
+$Red1: #BC0000;
+$Red2: #D81A1A;
+
+$LightGrey: #CCCCCC;
+$OCD_White: #FFFFFE;
+
+/* Margins and Padding */
+$column_margin: 50px;
+$column_padding: 20px;
+
+$button_margin: 10px;
+
+/* Opacity */
+$column_opacity: 0.9;
+
+body {
+    background-image: url("../images/E.png");
+    background-color: $LightGrey;
+    min-height: 2147483647px;
+  }
+
+
+.column {
+float: left;
+}
+
+.statistical {
+width: 20%;
+background-color:$LightGrey;
+opacity: $column_opacity;
+margin: $column_margin;
+padding: $column_padding;
+}
+
+.miscellaneous {
+width: 20%;
+background-color:$LightGrey;
+opacity: $column_opacity;
+margin: $column_margin;
+padding: $column_padding;
+}
+
+.movement {
+width: 20%;
+background-color:$LightGrey;
+opacity: $column_opacity;
+margin: $column_margin;
+padding: $column_padding;
+}
+
+.chat {
+width: 20%;
+background-color:$LightGrey;
+opacity: $column_opacity;
+margin: $column_margin;
+padding: $column_padding;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+
+.EclientButton {
+    background-color: $Red1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: $button_margin;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

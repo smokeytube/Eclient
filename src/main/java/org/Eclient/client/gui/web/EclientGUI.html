@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Eclient</title>
+
+<!--CSS-->
+<link rel="stylesheet" href="/css/EclientGUI.css">
+
+<!--Javascript-->
+<script src="/js/brython.js"></script>
+<script src="/js/brythonstd_lib.js"></script>
+<script type='text/javascript' src='/eel.js'></script>
+
+<!--GUI Functions-->
+<script type='text/javascript'>
+
+async function togglemodule() {
+    let module = document.getElementById('moduleinput').value;
+    let file_div = document.getElementById('moduletext');
+    
+    // Call into Python so we can access the file system
+    let random_filename = await eel.togglemodule(module)();
+    file_div.innerHTML = random_filename;
+}
+
+</script>
+
+
+<!--Python-->
+
+
+</head>
+<body onload="brython()">
+
+
+<div class="row">
+    <div class="column statistical">
+        <h2>Statistical</h2>
+        <form onsubmit="togglemodule(); return false;" >
+            <input id='moduleinput' type="hidden" value='Phase'/>
+            <button class="EclientButton" type="submit">Phase</button>
+        </form>
+        <div id='moduletext'>---</div>
+    </div>
+
+
+    <div class="column miscellaneous">
+        <h2>Miscellaneous</h2>
+        <button class="EclientButton">Button</button>
+    </div>
+
+
+    <div class="column movement">
+        <h2>Movement</h2>
+        <button class="EclientButton">Button</button>
+    </div>
+
+
+    <div class="column chat">
+        <h2>Chat</h2>
+        <button class="EclientButton">Button</button>
+    </div>
+
+
+</div>
+
+</body>
+</html>
