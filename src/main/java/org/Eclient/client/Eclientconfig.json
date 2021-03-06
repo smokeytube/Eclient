@@ -1,154 +1,154 @@
 {
-    "binds": {
-      "modifiersEnabled": false
+  "binds": {
+    "modifiersEnabled": false
+  },
+  "modules": {
+    "MovementLogger": {
+      "LoggingFreq": 0.1,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": false,
+      "Name": "Phase"
     },
-    "modules": {
-      "MovementLogger": {
-        "LoggingFreq": 0.1,
-        "Bind": "None",
-        "Visible": "ON",
-        "Enabled": false,
-        "Name": "Phase"
-      },
-      "Phase": {
-        "phaseamount": 5,
-        "Bind": "None",
-        "Visible": "ON",
-        "Enabled": false,
-        "Name": "Phase"
-      },
-      "PlayerTracker": {
-        "PlayerTrackerFreq": 2,
-        "Bind": "None",
-        "Visible": "ON",
-        "Enabled": false,
-        "Name": "Phase"
-      },
-      "Speed": {
-        "travelspeed": 0.2,
-        "Bind": "None",
-        "Visible": "ON",
-        "Enabled": false,
-        "Name": "Speed"
-      }
+    "Phase": {
+      "phaseamount": 5,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": true,
+      "Name": "Phase"
     },
-    "friends": {
-      "Friends": ""
+    "PlayerTracker": {
+      "PlayerTrackerFreq": 2,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": false,
+      "Name": "Phase"
     },
-    "commandPrefix": ";",
-    "delimiterV": "unchanged",
-    "gui": {
-      "Chat": {
-        "x": 133,
-        "y": 10,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Combat": {
-        "x": 10,
-        "y": 10,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Render": {
-        "x": 265,
-        "y": 18,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Player": {
-        "x": 478,
-        "y": 10,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Movement": {
-        "x": 379,
-        "y": 213,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Misc": {
-        "x": 371,
-        "y": 10,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Client": {
-        "x": 246,
-        "y": 10,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Active modules": {
-        "x": 367,
-        "y": 154,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Info": {
-        "x": 10,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Inventory Viewer": {
-        "x": 5,
-        "y": 206,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Friends": {
-        "x": 202,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Baritone": {
-        "x": 272,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Text Radar": {
-        "x": 352,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Entities": {
-        "x": 10,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Coordinates": {
-        "x": 80,
-        "y": 242,
-        "docking": 9,
-        "minimized": false,
-        "pinned": false
-      },
-      "Radar": {
-        "x": 100,
-        "y": 164,
-        "docking": 9,
-        "minimized": true,
-        "pinned": false
-      }
+    "Speed": {
+      "travelspeed": 0.2,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": false,
+      "Name": "Speed"
+    }
+  },
+  "friends": {
+    "Friends": ""
+  },
+  "commandPrefix": ";",
+  "delimiterV": "unchanged",
+  "gui": {
+    "Chat": {
+      "x": 133,
+      "y": 10,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Combat": {
+      "x": 10,
+      "y": 10,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Render": {
+      "x": 265,
+      "y": 18,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Player": {
+      "x": 478,
+      "y": 10,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Movement": {
+      "x": 379,
+      "y": 213,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Misc": {
+      "x": 371,
+      "y": 10,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Client": {
+      "x": 246,
+      "y": 10,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Active modules": {
+      "x": 367,
+      "y": 154,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Info": {
+      "x": 10,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Inventory Viewer": {
+      "x": 5,
+      "y": 206,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Friends": {
+      "x": 202,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Baritone": {
+      "x": 272,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Text Radar": {
+      "x": 352,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Entities": {
+      "x": 10,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Coordinates": {
+      "x": 80,
+      "y": 242,
+      "docking": 9,
+      "minimized": false,
+      "pinned": false
+    },
+    "Radar": {
+      "x": 100,
+      "y": 164,
+      "docking": 9,
+      "minimized": true,
+      "pinned": false
     }
   }
+}
