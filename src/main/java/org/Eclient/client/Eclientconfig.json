@@ -7,8 +7,13 @@
       "LoggingFreq": 0.1,
       "Bind": "None",
       "Visible": "ON",
+<<<<<<< Updated upstream
       "Enabled": false,
       "Name": "Phase"
+=======
+      "Enabled": true,
+      "Name": "MovementLogger"
+>>>>>>> Stashed changes
     },
     "Phase": {
       "phaseamount": 5,
@@ -17,12 +22,30 @@
       "Enabled": true,
       "Name": "Phase"
     },
+    "GoCrazy": {
+      "crazyamount": 2,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": false,
+      "Name": "GoCrazy"
+    },
+    "AutoSprint": {
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": true,
+      "Name": "AutoSprint"
+    },
     "PlayerTracker": {
       "PlayerTrackerFreq": 2,
       "Bind": "None",
       "Visible": "ON",
+<<<<<<< Updated upstream
       "Enabled": false,
       "Name": "Phase"
+=======
+      "Enabled": true,
+      "Name": "PlayerTracker"
+>>>>>>> Stashed changes
     },
     "Speed": {
       "travelspeed": 0.2,

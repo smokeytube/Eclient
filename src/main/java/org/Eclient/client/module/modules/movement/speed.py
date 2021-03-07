@@ -1,11 +1,9 @@
-#// TODO: Do not hardcode values in later
 #// /py src/main/java/org/Eclient/client/module/modules/movement/speed
 import input as input;
 from mine import *;
 from mcpi.minecraft import *;
 import json;
 import os;
-import time;
 
 
 

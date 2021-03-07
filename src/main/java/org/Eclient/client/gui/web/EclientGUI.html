@@ -53,7 +53,31 @@ async function togglemodule() {
 
     <div class="column movement">
         <h2>Movement</h2>
+<<<<<<< Updated upstream
         <button class="EclientButton">Button</button>
+=======
+
+        <form onsubmit="togglemodule('Phasetoggle', 'Phase'); return false;" >
+            <input id='Phase' type="hidden" value='Phase'/>
+            <button class="EclientButton" id="Phasetoggle" type="submit">Phase</button>
+        </form>
+
+        <form onsubmit="togglemodule('Speedtoggle', 'Speed'); return false;" >
+            <input id='Speed' type="hidden" value='Speed'/>
+            <button class="EclientButton" id="Speedtoggle" type="submit">Speed</button>
+        </form>
+
+        <form onsubmit="togglemodule('Gocrazytoggle', 'GoCrazy'); return false;" >
+            <input id='GoCrazy' type="hidden" value='GoCrazy'/>
+            <button class="EclientButton" id="Gocrazytoggle" type="submit">Go Crazy</button>
+        </form>
+
+        <form onsubmit="togglemodule('Autosprinttoggle', 'AutoSprint'); return false;" >
+            <input id='AutoSprint' type="hidden" value='AutoSprint'/>
+            <button class="EclientButton" id="Autosprinttoggle" type="submit">Auto Sprint</button>
+        </form>
+
+>>>>>>> Stashed changes
     </div>
 
 
