@@ -19,7 +19,7 @@ class MovementLogger:
         configs = MovementLogger.loadconfig()['modules'][modulenm];
         LoggerFreq = configs['LoggingFreq'];
 
-        movelog = open('data\\movementlogger\\movementlogger.txt', 'w');
+        movelog = open(os.getenv('Appdata')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\movementlogger\\movementlogger.txt', 'w');
         movelogtimeout = 0;
         player = mc.getPlayerId();
         
@@ -32,7 +32,7 @@ class MovementLogger:
             if movelogtimeout == 50:
                 movelog.close();
                 movelogtimeout = 0;
-                movelog = open('data\\movementlogger\\movementlogger.txt', 'a+');
+                movelog = open(os.getenv('Appdata')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\movementlogger\\movementlogger.txt', 'a+');
 
             movelog.write('{} {} {}\n'.format(x, y, z));
 

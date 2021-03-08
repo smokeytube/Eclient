@@ -7,13 +7,8 @@
       "LoggingFreq": 0.1,
       "Bind": "None",
       "Visible": "ON",
-<<<<<<< Updated upstream
-      "Enabled": false,
-      "Name": "Phase"
-=======
       "Enabled": true,
       "Name": "MovementLogger"
->>>>>>> Stashed changes
     },
     "Phase": {
       "phaseamount": 5,
@@ -32,26 +27,21 @@
     "AutoSprint": {
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": true,
+      "Enabled": false,
       "Name": "AutoSprint"
     },
     "PlayerTracker": {
       "PlayerTrackerFreq": 2,
       "Bind": "None",
       "Visible": "ON",
-<<<<<<< Updated upstream
-      "Enabled": false,
-      "Name": "Phase"
-=======
       "Enabled": true,
       "Name": "PlayerTracker"
->>>>>>> Stashed changes
     },
     "Speed": {
       "travelspeed": 0.2,
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "Speed"
     }
   },
