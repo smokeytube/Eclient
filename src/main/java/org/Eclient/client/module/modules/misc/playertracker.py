@@ -17,7 +17,7 @@ class PlayerTracker:
         mc = Minecraft();
         modulenm = str(__class__.__name__);
         configs = PlayerTracker.loadconfig()['modules'][modulenm];
-        TrackerFreq = configs['PlayerTrackerFreq'];
+        TrackerFreq = configs['playertrackerfreq'];
         whichEntity = 0;
         while True:
             entitys = mc.getPlayerEntityIds();

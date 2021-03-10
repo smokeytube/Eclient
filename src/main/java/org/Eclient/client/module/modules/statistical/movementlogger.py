@@ -17,7 +17,7 @@ class MovementLogger:
         mc = Minecraft();
         modulenm = str(__class__.__name__);
         configs = MovementLogger.loadconfig()['modules'][modulenm];
-        LoggerFreq = configs['LoggingFreq'];
+        LoggerFreq = configs['loggingfreq'];
 
         movelog = open(os.getenv('Appdata')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\movementlogger\\movementlogger.txt', 'w');
         movelogtimeout = 0;

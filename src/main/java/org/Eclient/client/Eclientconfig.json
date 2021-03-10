@@ -4,11 +4,19 @@
   },
   "modules": {
     "MovementLogger": {
-      "LoggingFreq": 0.1,
+      "loggingfreq": 0.1,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,
       "Name": "MovementLogger"
+    },
+    "KeyMapper": {
+      "sleep": 10,
+      "outputfile": "keymap.txt",
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": true,
+      "Name": "KeyMapper"
     },
     "Phase": {
       "phaseamount": 5,
@@ -21,17 +29,17 @@
       "crazyamount": 2,
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "GoCrazy"
     },
     "AutoSprint": {
       "Bind": "None",
       "Visible": "ON",
-      "Enabled": false,
+      "Enabled": true,
       "Name": "AutoSprint"
     },
     "PlayerTracker": {
-      "PlayerTrackerFreq": 2,
+      "playertrackerfreq": 2,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,

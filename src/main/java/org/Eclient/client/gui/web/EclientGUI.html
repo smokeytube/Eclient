@@ -24,13 +24,17 @@ async function loadmodules() {
 
 function setbtncolor(modulenm) {
     var moduledic = loadmodules();
-    var modulebtn = document.getElementById(modulenm);
-    console.log(moduledic);
-    if (moduledic.modulenm) {
-        modulebtn.style.backgroundColor = "#BC0000";
-    }
-    else {
-        modulebtn.style.backgroundColor = "#650b0b";
+    //var modulebtn = document.getElementById(modulenm);
+    for (var key in moduledic) {
+        console.log(JSON.stringify(key));
+        
+
+        //if (moduledic.modulenm) {
+        //    modulebtn.style.backgroundColor = "#BC0000";
+        //}
+        //else {
+        //    modulebtn.style.backgroundColor = "#650b0b";
+        //}
     }
 }
 
@@ -68,16 +72,21 @@ async function togglemodule(btn, inputval) {
 
 
 </head>
-<body onload="brython();">
+<body onload="brython(); setbtncolor('MovementLoggertoggle');">
 
 
 <div class="row">
     <div class="column statistical">
         <h2>Statistical</h2>
-<!--setbtncolor('MovementLoggertoggle');-->
-        <form onsubmit="togglemodule('MovementLoggertoggle', 'MovementLogger'); return false;" >
+
+        <form onsubmit="togglemodule('MovementLoggertoggle', 'MovementLogger'); return false;">
             <input id='MovementLogger' type="hidden" value='MovementLogger'/>
             <button class="EclientButton" id="MovementLoggertoggle" type="submit">MovementLogger</button>
+        </form>
+
+        <form onsubmit="togglemodule('KeyMappertoggle', 'KeyMapper'); return false;" >
+            <input id='KeyMapper' type="hidden" value='KeyMapper'/>
+            <button class="EclientButton" id="KeyMappertoggle" type="submit">Key Mapper</button>
         </form>
 
     </div>
