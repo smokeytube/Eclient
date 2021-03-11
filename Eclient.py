@@ -15,6 +15,10 @@ from src.main.java.org.Eclient.client.module.modules.movement.autosprint import 
 
 #// Statistical
 from src.main.java.org.Eclient.client.module.modules.statistical.movementlogger import MovementLogger as movementlogger;
+from src.main.java.org.Eclient.client.module.modules.statistical.keymapper import KeyMapper as keymapper;
+
+#// Chat
+from src.main.java.org.Eclient.client.module.modules.chat.chatlogger import ChatLogger as chatlogger;
 
 #// Misc
 from src.main.java.org.Eclient.client.module.modules.misc.playertracker import PlayerTracker as playertracker;
@@ -22,13 +26,13 @@ from src.main.java.org.Eclient.client.module.modules.misc.playertracker import P
 
 
 class Main:
-    def loadjson():
+    def loadjson() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
-    def Main():
+    def Main() -> None:
         #// Movement
-        configs = Main.loadjson()['modules'];
+        configs: dict = Main.loadjson()['modules'];
 
         if configs['Speed']['Enabled'] == True:
             Process(target=speed.Main).start();
@@ -45,6 +49,13 @@ class Main:
         #// Statistical
         if configs['MovementLogger']['Enabled'] == True:
             Process(target=movementlogger.Main).start();
+
+        if configs['KeyMapper']['Enabled'] == True:
+            Process(target=keymapper.Main).start();
+
+        #//Chat
+        if configs['ChatLogger']['Enabled'] == True:
+            Process(target=chatlogger.Main).start();
 
         #// Misc
         if configs['PlayerTracker']['Enabled'] == True:

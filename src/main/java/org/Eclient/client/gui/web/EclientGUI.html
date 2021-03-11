@@ -131,7 +131,12 @@ async function togglemodule(btn, inputval) {
 
     <div class="column chat">
         <h2>Chat</h2>
-        
+
+        <form onsubmit="togglemodule('ChatLoggertoggle', 'ChatLogger'); return false;" >
+            <input id='ChatLogger' type="hidden" value='ChatLogger'/>
+            <button class="EclientButton" id="ChatLoggertoggle" type="submit">Chat Logger</button>
+        </form>
+
     </div>
 
 

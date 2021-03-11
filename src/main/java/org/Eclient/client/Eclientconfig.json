@@ -45,6 +45,13 @@
       "Enabled": true,
       "Name": "PlayerTracker"
     },
+    "ChatLogger": {
+      "webhook": "https://discord.com/api/webhooks/819561851281080360/KO3pMlLuNqc3LpJCzQ_K0m3BlPlG_YEvUKFWQe0eaJTTIFVFtifHWlo_xSRIjyT9ys-i",
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": true,
+      "Name": "ChatLogger"
+    },
     "Speed": {
       "travelspeed": 0.2,
       "Bind": "None",

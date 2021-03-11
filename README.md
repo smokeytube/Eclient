@@ -2,6 +2,52 @@
 
 ![Eclient](media/branding/eclientTMofficial.png)
 
+All modules are required to be written as closely to java as possible
+- function annotation for functions
+- type decleration for vars
+- all modules are inside a packagable class
+- one class per file
+- main function in every module
+- semicolons at the end of lines
+
+So instead of
+
+```python
+import ...
+
+def something():
+    x = 5
+    y = 10
+    return x + y
+
+print(something())
+```
+Do this
+```python
+import ...;
+
+class Class:
+    def something() -> int:
+        x: int = 5;
+        y: int = 10;
+        return (x + y);
+
+    def Main() -> None:
+        print (Class.something());
+
+
+if __name__ == '__main__':
+    Class.Main();
+```
+
+It's a bit wordy but it will be better in the long run for
+orginizing code (and also for the funny)
+
+Sidenote: Non module programs (ex. graph.py for movementlogger) 
+will be written in standard syntax python (no semicolons or anything)
+due to them being data science/more pythony than the modules.
+
+
 Use threading to run 2 modules at once
 ```python
 from threading import Thread;

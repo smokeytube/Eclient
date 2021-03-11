@@ -1,6 +1,7 @@
-#//This module isn't finished yet. Please check later
-#// /py src/main/java/org/Eclient/client/module/modules/misc/playertracker
+#// /py src/main/java/org/Eclient/client/module/modules/misc/playertracker.py
 
+from multiprocessing import Array
+from typing import Any
 from mine import *;
 import time;
 import json;
@@ -9,11 +10,11 @@ import os;
 
 
 class PlayerTracker:
-    def loadconfig():
+    def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
-    def Main():
+    def Main() -> None:
         mc = Minecraft();
         modulenm = str(__class__.__name__);
         configs = PlayerTracker.loadconfig()['modules'][modulenm];
