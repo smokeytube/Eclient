@@ -26,7 +26,7 @@
       "Name": "Phase"
     },
     "GoCrazy": {
-      "crazyamount": 2,
+      "crazyamount": 3,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,

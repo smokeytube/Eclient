@@ -1,3 +1,6 @@
 {\rtf1}
 /notmyscripts(forreferance)/
 /.vscode/
+*.pyc
+*.pyo
+/__pycache__/

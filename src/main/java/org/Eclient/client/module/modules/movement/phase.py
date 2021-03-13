@@ -9,26 +9,27 @@ import time;
     
 
 class Phase:
-    def loadconfig():
+    @staticmethod
+    def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
         
-    def Main():
-        mc = Minecraft();
-        modulenm = str(__class__.__name__);
-        configs = Phase.loadconfig()['modules'][modulenm];
-        player = mc.getPlayerId();
-        Yspeed = configs['phaseamount'];
+    def Main() -> None:
+        mc: object = Minecraft();
+        modulenm: str = str(__class__.__name__);
+        configs: list = Phase.loadconfig()['modules'][modulenm];
+        player: int = mc.getPlayerId();
+        Yspeed: float = configs['phaseamount'];
 
         while True:
-            pos = mc.entity.getPos(player);
-            move = False;
+            pos: object = mc.entity.getPos(player);
+            move: bool = False;
             if input.wasPressedSinceLast(input.KEY_PLUS):
                 pos.y += Yspeed;
-                move = True;
+                move: bool = True;
             if input.wasPressedSinceLast(input.KEY_MINUS):
                 pos.y -= Yspeed;
-                move = True;
+                move: bool = True;
             if move:
                 try:
                     mc.entity.setPos(player,pos);

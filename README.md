@@ -55,7 +55,7 @@ from phase import Phase as Phase;
 from speed import Speed as Speed;
 
 class twoModulesAtOnce:
-    def Main():
+    def Main() -> None:
         Thread(target = Phase.Main).start();
         Thread(target = Speed.Main).start();
 
@@ -76,11 +76,11 @@ import threading as Thread;
 import os;
 
 class Main:
-    def loadconfig():
+    def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
-    def Main():
+    def Main() -> None:
         configs = Phase.loadconfig()['modules'];
 
         if configs['module1']['Enabled'] == True:

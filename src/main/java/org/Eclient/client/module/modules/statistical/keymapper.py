@@ -1,24 +1,23 @@
 #// /py src/main/java/org/Eclient/client/module/modules/statistical/keymapper.py
 
 from mine import *;
-import time;
 import json;
-import math;
 import os;
 
 
 class KeyMapper:
-    def loadconfig():
+    @staticmethod
+    def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
-    def Main():
-        modulenm = str(__class__.__name__);
-        configs = KeyMapper.loadconfig()['modules'][modulenm];
-        sleeptime = configs['sleep'];
-        outputtxt = configs['outputfile'];
+    def Main() -> None:
+        modulenm: str = str(__class__.__name__);
+        configs: dict = KeyMapper.loadconfig()['modules'][modulenm];
+        sleeptime: int = configs['sleep'];
+        outputtxt: str = configs['outputfile'];
 
-        keymapperpath = (os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\keymapper\\');
+        keymapperpath: str = (os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\keymapper\\');
         os.system(keymapperpath+'keymapper.exe '+str(sleeptime)+' '+keymapperpath+outputtxt);
 
 

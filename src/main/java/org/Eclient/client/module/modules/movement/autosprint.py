@@ -5,8 +5,7 @@ from mcpi.minecraft import *;
 
 
 class AutoSprint:
-
-    def Main():
+    def Main() -> None:
         while True:
             if input.wasPressedSinceLast(input.KEY_W):
                 input.pressKey(input.CONTROL);
