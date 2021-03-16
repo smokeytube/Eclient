@@ -22,6 +22,7 @@ from src.main.java.org.Eclient.client.module.modules.chat.chatlogger import Chat
 
 #// Misc
 from src.main.java.org.Eclient.client.module.modules.misc.playertracker import PlayerTracker as playertracker;
+from src.main.java.org.Eclient.client.module.modules.misc.ZeroWaitForYou import ZeroWaitForYou as zerowaitforyou;
 
 
 
@@ -60,6 +61,9 @@ class Main:
         #// Misc
         if configs['PlayerTracker']['Enabled'] == True:
             Process(target=playertracker.Main).start();
+
+        if configs['ZeroWaitForYou']['Enabled'] == True:
+            Process(target=zerowaitforyou.Main).start();
 
 
 if __name__ == '__main__':
