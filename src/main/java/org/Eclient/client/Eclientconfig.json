@@ -18,6 +18,21 @@
       "Enabled": true,
       "Name": "KeyMapper"
     },
+    "ZeroWaitForYou": {
+      "join_time": "21:27",
+      "discord_tag": "<@773984010049028096>",
+      "discord_webhook": "https://discord.com/api/webhooks/819561851281080360/KO3pMlLuNqc3LpJCzQ_K0m3BlPlG_YEvUKFWQe0eaJTTIFVFtifHWlo_xSRIjyT9ys-i",
+      "disconnect_at_certian_position": "yes",
+      "warning_position": 50,
+      "sound_warning": "no",
+      "disconnect_position": 5,
+      "reconnect": "yes",
+      "time_between_reconnects": 60,
+      "Bind": "None",
+      "Visible": "ON",
+      "Enabled": true,
+      "Name": "ZeroWaitForYou"
+    },
     "Phase": {
       "phaseamount": 5,
       "Bind": "None",

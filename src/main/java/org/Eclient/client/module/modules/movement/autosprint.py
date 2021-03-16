@@ -1,10 +1,13 @@
 #// /py src/main/java/org/Eclient/client/module/modules/movement/autosprint.py
+
 import input as input;
 from mine import *;
 from mcpi.minecraft import *;
 
 
+
 class AutoSprint:
+    @staticmethod
     def Main() -> None:
         while True:
             if input.wasPressedSinceLast(input.KEY_W):

@@ -11,12 +11,15 @@ from typing import TextIO;
 from discord_webhook import DiscordWebhook;
 from multiprocessing import Process;
 
+
+
 class ChatLogger:
     @staticmethod
     def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
+    @staticmethod
     def readlog(txt) -> str:
         txt.seek(0,2);
         while True:
@@ -26,6 +29,7 @@ class ChatLogger:
                 continue;
             yield line;
 
+    @staticmethod
     def opencurrenttxt() -> TextIOWrapper:
         logpath: str = (os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\chat\\logs\\');
         txtfile: str = logpath+'/'+str(datetime.today().year)+'/'+str(datetime.today().month)+'/'+str(datetime.today().day)+'/'+str(datetime.now().strftime("%H-00"))+'.txt';
@@ -39,6 +43,7 @@ class ChatLogger:
             exit();
         return filelog;
 
+    @staticmethod
     def Main() -> None:
         logfile: TextIOWrapper = open(os.getenv("APPDATA")+"/.minecraft/logs/latest.log", "r");
         modulenm: str = str(__class__.__name__);
@@ -68,6 +73,7 @@ class ChatLogger:
                 x: int = 1;
             else:
                 x += 1;
+
 
 if __name__ == '__main__':
     ChatLogger.Main();

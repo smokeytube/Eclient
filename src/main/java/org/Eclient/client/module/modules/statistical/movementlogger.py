@@ -9,12 +9,14 @@ import json;
 import os;
 
 
+
 class MovementLogger:
     @staticmethod
     def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
+    @staticmethod
     def Main() -> None:
         mc: object = Minecraft();
         modulenm: str = str(__class__.__name__);

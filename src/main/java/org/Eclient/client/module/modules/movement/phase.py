@@ -1,4 +1,5 @@
 #// /py src/main/java/org/Eclient/client/module/modules/movement/phase
+
 import input as input;
 from mine import *;
 from mcpi.minecraft import *;
@@ -13,7 +14,8 @@ class Phase:
     def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
-        
+    
+    @staticmethod
     def Main() -> None:
         mc: object = Minecraft();
         modulenm: str = str(__class__.__name__);
@@ -35,6 +37,7 @@ class Phase:
                     mc.entity.setPos(player,pos);
                 except:
                     mc.postToChat("Error");
+
 
 if __name__ == '__main__':
     Phase.Main();

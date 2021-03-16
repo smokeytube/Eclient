@@ -5,12 +5,14 @@ import json;
 import os;
 
 
+
 class KeyMapper:
     @staticmethod
     def loadconfig() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
+    @staticmethod
     def Main() -> None:
         modulenm: str = str(__class__.__name__);
         configs: dict = KeyMapper.loadconfig()['modules'][modulenm];
