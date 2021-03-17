@@ -1,4 +1,4 @@
-#// /py src/main/java/org/Eclient/client/module/modules/misc/0wait4you.py
+#// /py src/main/java/org/Eclient/client/module/modules/misc/ZeroWaitForYou.py
 
 #// I reccommend starting this file outside of minecraft right now because it
 #// starts outside of minecraft

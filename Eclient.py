@@ -7,6 +7,9 @@ import json;
 from multiprocessing import Process;
 import os;
 
+#// GUI
+from src.main.java.org.Eclient.client.gui.EclientGUI import EclientGUI as eclientgui;
+
 #// Movement
 from src.main.java.org.Eclient.client.module.modules.movement.speed import Speed as speed;
 from src.main.java.org.Eclient.client.module.modules.movement.phase import Phase as phase;
@@ -22,16 +25,20 @@ from src.main.java.org.Eclient.client.module.modules.chat.chatlogger import Chat
 
 #// Misc
 from src.main.java.org.Eclient.client.module.modules.misc.playertracker import PlayerTracker as playertracker;
-from src.main.java.org.Eclient.client.module.modules.misc.ZeroWaitForYou import ZeroWaitForYou as zerowaitforyou;
 
 
 
 class Main:
+    @staticmethod
     def loadjson() -> dict:
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
+    @staticmethod
     def Main() -> None:
+        #// Initaite GUI
+        Process(target=eclientgui.Main).start();
+
         #// Movement
         configs: dict = Main.loadjson()['modules'];
 
@@ -61,9 +68,6 @@ class Main:
         #// Misc
         if configs['PlayerTracker']['Enabled'] == True:
             Process(target=playertracker.Main).start();
-
-        if configs['ZeroWaitForYou']['Enabled'] == True:
-            Process(target=zerowaitforyou.Main).start();
 
 
 if __name__ == '__main__':
