@@ -1,6 +1,6 @@
 import struct
 
-from mcstatus.protocol.connection import Connection
+from src.module.misc.mcstatus.protocol.connection import Connection
 
 
 class ServerQuerier:

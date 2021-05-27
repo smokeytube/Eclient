@@ -1,8 +1,8 @@
-from mcstatus.pinger import ServerPinger, AsyncServerPinger
-from mcstatus.protocol.connection import TCPSocketConnection, UDPSocketConnection, TCPAsyncSocketConnection
-from mcstatus.querier import ServerQuerier
-from mcstatus.bedrock_status import BedrockServerStatus
-from mcstatus.scripts.address_tools import parse_address
+from src.module.misc.mcstatus.pinger import ServerPinger, AsyncServerPinger
+from src.module.misc.mcstatus.protocol.connection import TCPSocketConnection, UDPSocketConnection, TCPAsyncSocketConnection
+from src.module.misc.mcstatus.querier import ServerQuerier
+from src.module.misc.mcstatus.bedrock_status import BedrockServerStatus
+from src.module.misc.mcstatus.scripts.address_tools import parse_address
 import dns.resolver
 
 
@@ -15,12 +15,12 @@ class MinecraftServer:
     :attr port:
     """
 
-    def __init__(self, host, port = 25565):
+    def __init__(self, host: str, port: int = 25565):
         self.host = host
         self.port = port
 
     @staticmethod
-    def lookup(address):
+    def lookup(address: str):
         """Parses the given address and checks DNS records for an SRV record that points to the Minecraft server.
 
         :param str address: The address of the Minecraft server, like `example.com:25565`.
@@ -42,13 +42,13 @@ class MinecraftServer:
 
         return MinecraftServer(host, port)
 
-    def ping(self, tries = 3, **kwargs):
+    def ping(self, tries: int = 3, **kwargs):
         """Checks the latency between a Minecraft Java Edition server and the client (you).
 
         :param int tries: How many times to retry if it fails.
         :param type **kwargs: Passed to a `ServerPinger` instance.
         :return: The latency between the Minecraft Server and you.
-        :rtype
+        :rtype: float
         """
 
         connection = TCPSocketConnection((self.host, self.port))
@@ -63,13 +63,13 @@ class MinecraftServer:
         else:
             raise exception
 
-    async def async_ping(self, tries = 3, **kwargs):
+    async def async_ping(self, tries: int = 3, **kwargs):
         """Asynchronously checks the latency between a Minecraft Java Edition server and the client (you).
 
         :param int tries: How many times to retry if it fails.
         :param type **kwargs: Passed to a `AsyncServerPinger` instance.
         :return: The latency between the Minecraft Server and you.
-        :rtype
+        :rtype: float
         """
 
         connection = await TCPAsyncSocketConnection((self.host, self.port))
@@ -84,7 +84,7 @@ class MinecraftServer:
         else:
             raise exception
 
-    def status(self, tries = 3, **kwargs):
+    def status(self, tries: int = 3, **kwargs):
         """Checks the status of a Minecraft Java Edition server via the ping protocol.
 
         :param int tries: How many times to retry if it fails.
@@ -108,7 +108,7 @@ class MinecraftServer:
         else:
             raise exception
 
-    async def async_status(self, tries = 3, **kwargs):
+    async def async_status(self, tries: int = 3, **kwargs):
         """Asynchronously checks the status of a Minecraft Java Edition server via the ping protocol.
 
         :param int tries: How many times to retry if it fails.
@@ -132,7 +132,7 @@ class MinecraftServer:
         else:
             raise exception
 
-    def query(self, tries = 3):
+    def query(self, tries: int = 3):
         """Checks the status of a Minecraft Java Edition server via the query protocol.
 
         :param int tries: How many times to retry if it fails.
@@ -160,7 +160,7 @@ class MinecraftServer:
         else:
             raise exception
 
-    async def async_query(self, tries = 3):
+    async def async_query(self, tries: int = 3):
         raise NotImplementedError # TODO: '-'
 
 
@@ -173,7 +173,7 @@ class MinecraftBedrockServer:
     :attr port:
     """
 
-    def __init__(self, host, port = 19132):
+    def __init__(self, host: str, port: int = 19132):
         self.host = host
 
         if port is None:
@@ -182,7 +182,7 @@ class MinecraftBedrockServer:
             self.port = port
 
     @classmethod
-    def lookup(cls, address):
+    def lookup(cls, address: str):
         """Parses a given address and returns a MinecraftBedrockServer instance.
 
         :param str address: The address of the Minecraft server, like `example.com:19132`
@@ -192,7 +192,7 @@ class MinecraftBedrockServer:
 
         return cls(*parse_address(address))
 
-    def status(self, tries = 3, **kwargs):
+    def status(self, tries: int = 3, **kwargs):
         """Checks the status of a Minecraft Bedrock Edition server.
 
         :param int tries: How many times to retry if it fails.
@@ -215,7 +215,7 @@ class MinecraftBedrockServer:
 
         return resp
 
-    async def async_status(self, tries = 3, **kwargs):
+    async def async_status(self, tries: int = 3, **kwargs):
         """Asynchronously checks the status of a Minecraft Bedrock Edition server.
 
         :param int tries: How many times to retry if it fails.

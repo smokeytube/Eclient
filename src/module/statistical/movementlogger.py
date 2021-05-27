@@ -1,4 +1,4 @@
-#// /py src/module/statistical/movementlogger
+# /py src/module/statistical/movementlogger
 
 from mine import *
 import time

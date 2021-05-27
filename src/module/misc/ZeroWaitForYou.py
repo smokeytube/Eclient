@@ -49,19 +49,19 @@ class ZeroWaitForYou:
 
     @staticmethod
     def processImage(image) -> bool:
-            start: bool = pyautogui.locateOnScreen(image, confidence=0.8);
+            start = pyautogui.locateOnScreen(image, confidence=0.8);
             pyautogui.moveTo(start);
             return start;
 
     @staticmethod
     def click_image(image):
-        start: bool = pyautogui.locateOnScreen(image, confidence=0.8);
+        start = pyautogui.locateOnScreen(image, confidence=0.8);
         pyautogui.moveTo(start);
         ZeroWaitForYou.click();
 
     @staticmethod
     def doubleclick_image(image):
-        start: bool = pyautogui.locateOnScreen(image, confidence=0.8);
+        start = pyautogui.locateOnScreen(image, confidence=0.8);
         pyautogui.moveTo(start);
         ZeroWaitForYou.doubleclick();
 
@@ -78,7 +78,7 @@ class ZeroWaitForYou:
     @staticmethod
     def Main():
         modulenm = str(__class__.__name__);
-        configs: dict = ZeroWaitForYou.loadconfig()['modules'][modulenm];
+        configs = ZeroWaitForYou.loadconfig()['modules'][modulenm];
         jointime =  configs['join_time'];
         distag = configs['discord_tag'];
         diswebhook = configs['discord_webhook'];

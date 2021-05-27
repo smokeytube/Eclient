@@ -40,7 +40,7 @@ class Eclient:
         Process(target=eclientgui.Main).start();
 
         #// Movement
-        configs: dict = Eclient.loadjson()['modules'];
+        configs = Eclient.loadjson()['modules'];
 
         if configs['Speed']['Enabled'] == True:
             Process(target=speed.Main).start();

@@ -1,44 +1,33 @@
-#// /py src/main/java/org/Eclient/client/module/modules/movement/phase
+# /py src/module/movement/phase
 
-import input as input;
-from mine import *;
-from mcpi.minecraft import *;
-import json;
-import os;
-import time;
+import input as input
+from mine import *
+from mcpi.minecraft import *
+from src.module.functions import loadconfig
 
-    
+def Main():
+    mc = Minecraft()
+    modulenm = "Phase"
+    configs = loadconfig()['modules'][modulenm]
+    player = mc.getPlayerId()
+    Yspeed = configs['phaseamount']
 
-class Phase:
-    @staticmethod
-    def loadconfig():
-        with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
-            return json.load(configpath);
-    
-    @staticmethod
-    def Main():
-        mc = Minecraft();
-        modulenm = str(__class__.__name__);
-        configs = Phase.loadconfig()['modules'][modulenm];
-        player = mc.getPlayerId();
-        Yspeed = configs['phaseamount'];
-
-        while True:
-            pos = mc.entity.getPos(player);
-            move: bool = False;
-            if input.wasPressedSinceLast(input.KEY_PLUS):
-                pos.y += Yspeed;
-                move: bool = True;
-            if input.wasPressedSinceLast(input.KEY_MINUS):
-                pos.y -= Yspeed;
-                move: bool = True;
-            if move:
-                try:
-                    mc.entity.setPos(player,pos);
-                except:
-                    mc.postToChat("Error");
+    while True:
+        pos = mc.entity.getPos(player)
+        move = False
+        if input.wasPressedSinceLast(input.KEY_PLUS):
+            pos.y += Yspeed
+            move = True
+        if input.wasPressedSinceLast(input.KEY_MINUS):
+            pos.y -= Yspeed
+            move = True
+        if move:
+            try:
+                mc.entity.setPos(player,pos)
+            except:
+                mc.postToChat("Error")
 
 
 if __name__ == '__main__':
-    Phase.Main();
+    Main()
     

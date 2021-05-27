@@ -27,7 +27,7 @@ z =[]
 
 nocoords = True
 
-with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\module\\modules\\statistical\\data\\\movementlogger\\'+'movementlogger.txt', 'r') as coordslist:
+with open(os.getcwd()+"\\src\\module\\statistical\\data\\movementlogger\\movementlogger.txt", "r") as coordslist:
     if nocoords:
         first_line = coordslist.readline()
         coords = first_line.split(' ')

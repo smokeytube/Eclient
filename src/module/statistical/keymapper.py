@@ -1,4 +1,4 @@
-#// /py src/module/statistical/keymapper
+# /py src/module/statistical/keymapper
 
 from mine import *
 import os
@@ -6,7 +6,7 @@ from src.module.functions import loadconfig
 
 def Main():
     modulenm = "KeyMapper"
-    configs: dict = loadconfig()['modules'][modulenm]
+    configs = loadconfig()['modules'][modulenm]
     sleeptime = configs['sleep']
     outputtxt = configs['outputfile']
 

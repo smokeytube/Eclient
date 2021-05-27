@@ -47,7 +47,7 @@ class ChatLogger:
     def Main():
         logfile = open(os.getenv("APPDATA")+"/.minecraft/logs/latest.log", "r");
         modulenm = str(__class__.__name__);
-        configs: dict = ChatLogger.loadconfig()['modules'][modulenm];
+        configs = ChatLogger.loadconfig()['modules'][modulenm];
         webhookurl = configs['webhook'];
         loglines = ChatLogger.readlog(logfile);
         filelog = ChatLogger.opencurrenttxt();

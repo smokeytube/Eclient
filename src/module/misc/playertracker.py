@@ -1,51 +1,42 @@
-#// /py src/main/java/org/Eclient/client/module/modules/misc/playertracker.py
+# /py src/module/misc/playertracker
 
-from typing import Any;
-from mine import *;
-import time;
-import json;
-import math;
-import os;
+from mine import *
+import time
+import math
+from src.module.functions import loadconfig
 
+def Main():
+    mc = Minecraft()
+    modulenm = "PlayerTracker"
+    configs = loadconfig()['modules'][modulenm]
+    TrackerFreq = configs['playertrackerfreq']
+    whichEntity = 0
+    while True:
+        entitys = mc.getPlayerEntityIds()
+        player = mc.getPlayerId()
+        try:
+            posentity = mc.entity.getPos(entitys[whichEntity])
+        except:
+            posentity = mc.entity.getPos(entitys[0])
 
-class PlayerTracker:
-    @staticmethod
-    def loadconfig():
-        with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
-            return json.load(configpath);
+        posplayer = mc.entity.getPos(player)
+        diffx = posentity.x - posplayer.x
+        diffy = posentity.y - posplayer.y
+        diffz = posentity.z - posplayer.z
 
-    def Main():
-        mc = Minecraft();
-        modulenm = str(__class__.__name__);
-        configs: dict = PlayerTracker.loadconfig()['modules'][modulenm];
-        TrackerFreq = configs['playertrackerfreq'];
-        whichEntity = 0;
-        while True:
-            entitys = mc.getPlayerEntityIds();
-            player = mc.getPlayerId();
-            try:
-                posentity = mc.entity.getPos(entitys[whichEntity]);
-            except:
-                posentity = mc.entity.getPos(entitys[0]);
+        try:
+            chatmsg = (mc.entity.getName(entitys[whichEntity]))
+        except:
+            chatmsg = (mc.entity.getName(entitys[0]))
+        mc.postToChat(chatmsg)
 
-            posplayer = mc.entity.getPos(player);
-            diffx = posentity.x - posplayer.x;
-            diffy = posentity.y - posplayer.y;
-            diffz = posentity.z - posplayer.z;
+        distance = math.sqrt((diffx ** 2) + (diffy ** 2) + (diffz ** 2))
+        mc.postToChat(distance)
 
-            try:
-                chatmsg = (mc.entity.getName(entitys[whichEntity]));
-            except:
-                chatmsg = (mc.entity.getName(entitys[0]));
-            mc.postToChat(chatmsg);
+        if distance == 0.0:
+            whichEntity += 1
 
-            distance = math.sqrt((diffx ** 2) + (diffy ** 2) + (diffz ** 2));
-            mc.postToChat(distance);
-
-            if distance == 0.0:
-                whichEntity += 1;
-
-            time.sleep(TrackerFreq);
+        time.sleep(TrackerFreq)
 
 if __name__ == '__main__':
-    PlayerTracker.Main();
+    Main()

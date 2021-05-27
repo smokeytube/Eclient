@@ -3,7 +3,7 @@ import json
 import random
 from six import string_types
 
-from mcstatus.protocol.connection import Connection
+from src.module.misc.mcstatus.protocol.connection import Connection
 
 
 class ServerPinger:
