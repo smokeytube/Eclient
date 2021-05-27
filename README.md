@@ -27,12 +27,12 @@ Do this
 import ...;
 
 class Class:
-    def something() -> int:
-        x: int = 5;
-        y: int = 10;
+    def something():
+        x = 5;
+        y = 10;
         return (x + y);
 
-    def Main() -> None:
+    def Main():
         print (Class.something());
 
 
@@ -55,7 +55,7 @@ from phase import Phase as Phase;
 from speed import Speed as Speed;
 
 class twoModulesAtOnce:
-    def Main() -> None:
+    def Main():
         Thread(target = Phase.Main).start();
         Thread(target = Speed.Main).start();
 
@@ -76,11 +76,11 @@ import threading as Thread;
 import os;
 
 class Main:
-    def loadconfig() -> dict:
+    def loadconfig():
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
-    def Main() -> None:
+    def Main():
         configs = Phase.loadconfig()['modules'];
 
         if configs['module1']['Enabled'] == True:

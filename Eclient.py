@@ -28,19 +28,19 @@ from src.main.java.org.Eclient.client.module.modules.misc.playertracker import P
 
 
 
-class Main:
+class Eclient:
     @staticmethod
-    def loadjson() -> dict:
+    def loadjson():
         with open(os.getenv('AppData')+'\\.minecraft\\mcpipy\\src\\main\\java\\org\\Eclient\\client\\Eclientconfig.json') as configpath:
             return json.load(configpath);
 
     @staticmethod
-    def Main() -> None:
+    def Main():
         #// Initaite GUI
         Process(target=eclientgui.Main).start();
 
         #// Movement
-        configs: dict = Main.loadjson()['modules'];
+        configs: dict = Eclient.loadjson()['modules'];
 
         if configs['Speed']['Enabled'] == True:
             Process(target=speed.Main).start();
@@ -71,4 +71,4 @@ class Main:
 
 
 if __name__ == '__main__':
-    Main.Main();
+    Eclient.Main();
