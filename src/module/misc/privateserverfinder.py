@@ -1,6 +1,4 @@
-#// /py src/main/java/org/Eclient/client/module/modules/misc/privateserverfinder.py
-
-#// I reccommend starting this file outside of minecraft right now 
+# /py src/module/misc/privateserverfinder
 
 import threading
 from queue import Queue
@@ -17,7 +15,7 @@ def Main():
     iptxtfle = (os.getcwd()+"\\src\\module\\misc\\ips\\"+"{0}0-{1}255.txt".format(halfip, halfip))
     for exxx in range(0, 256):
         ip = "{0}{1}".format(halfip, exxx)
-        print(ip)
+
         def scan_ip_and_port(ekis):
             try:
                 server = MinecraftServer.lookup("{0}:{1}".format(ip, ekis))

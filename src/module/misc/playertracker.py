@@ -14,27 +14,50 @@ def Main():
     while True:
         entitys = mc.getPlayerEntityIds()
         player = mc.getPlayerId()
+
+        posplayer = mc.entity.getPos(player)
+        distances = {}
+        for entit in entitys:
+            try:
+                posentity = mc.entity.getPos(entit)
+            except:
+                continue
+            diffx = posentity.x - posplayer.x
+            diffz = posentity.z - posplayer.z
+            diffy = posentity.y - posplayer.y
+            distance = math.sqrt((diffx ** 2) + (diffy ** 2) + (diffz ** 2))
+            if distance == 0.0:
+                continue
+            distances[entit] = distance
+        
+
         try:
-            posentity = mc.entity.getPos(entitys[whichEntity])
+            lowestdistuple = min(distances.items(), key=lambda x: x[1])
+            lowestdistanceguy, dista = lowestdistuple
+        except:
+            continue
+
+        if player == lowestdistanceguy:
+            continue
+
+
+        try:
+            posentity = mc.entity.getPos(lowestdistanceguy)
         except:
             posentity = mc.entity.getPos(entitys[0])
 
-        posplayer = mc.entity.getPos(player)
         diffx = posentity.x - posplayer.x
         diffy = posentity.y - posplayer.y
         diffz = posentity.z - posplayer.z
 
         try:
-            chatmsg = (mc.entity.getName(entitys[whichEntity]))
+            chatmsg = (mc.entity.getName(lowestdistanceguy))
         except:
             chatmsg = (mc.entity.getName(entitys[0]))
         mc.postToChat(chatmsg)
 
         distance = math.sqrt((diffx ** 2) + (diffy ** 2) + (diffz ** 2))
         mc.postToChat(distance)
-
-        if distance == 0.0:
-            whichEntity += 1
 
         time.sleep(TrackerFreq)
 

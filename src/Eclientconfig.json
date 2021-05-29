@@ -61,7 +61,7 @@
       "Name": "AutoSprint"
     },
     "PlayerTracker": {
-      "playertrackerfreq": 2,
+      "playertrackerfreq": 3,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,
