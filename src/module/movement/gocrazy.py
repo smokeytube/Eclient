@@ -5,6 +5,7 @@ from mine import *
 from mcpi.minecraft import *
 import random
 from src.module.functions import loadconfig
+import keyboard
 
 def Main():
     mc = Minecraft()
@@ -26,46 +27,50 @@ def Main():
             return random.randint(1, crazyamount)
 
     while True:
-        pos = mc.entity.getPos(player)
-        yaw = mc.entity.getRotation(player)
-        move = False
-
-        if input.wasPressedSinceLast(input.KEY_W):
-            pos.z -= gostupid() * sin(radians(yaw))
-            pos.x -= gostupid() * cos(radians(yaw))
-            pos.z += gostupid() * sin(radians(yaw))
-            pos.x += gostupid() * cos(radians(yaw))
-            move = True
-        if input.wasPressedSinceLast(input.KEY_S):
-            pos.z += gostupid() * sin(radians(yaw))
-            pos.x += gostupid() * cos(radians(yaw))
-            pos.z -= gostupid() * sin(radians(yaw))
-            pos.x -= gostupid() * cos(radians(yaw))
-            move = True
-        if input.wasPressedSinceLast(input.KEY_D):
-            pos.x += gostupid() * -sin(radians(yaw))
-            pos.z += gostupid() * cos(radians(yaw))
-            pos.x -= gostupid() * -sin(radians(yaw))
-            pos.z -= gostupid() * cos(radians(yaw))
-            move = True
-        if input.wasPressedSinceLast(input.KEY_A):
-            pos.x -= gostupid() * -sin(radians(yaw))
-            pos.z -= gostupid() * cos(radians(yaw))
-            pos.x += gostupid() * -sin(radians(yaw))
-            pos.z += gostupid() * cos(radians(yaw))
-            move = True
-        if input.wasPressedSinceLast(input.SPACE):
-            posorneg = random.randint(1,2)
-            if posorneg == 1:
-                pos.y += gostupid()
-            else:
-                pos.y -= gostupid()
-            move = True
-        if move:
+        if keyboard.is_pressed('r'):
             try:
-                mc.entity.setPos(player,pos)
+                pos = mc.entity.getPos(player)
+                yaw = mc.entity.getRotation(player)
             except:
-                mc.postToChat("Error with "+modulenm)
+                continue
+            move = False
+
+            if input.wasPressedSinceLast(input.KEY_W):
+                pos.z -= gostupid() * sin(radians(yaw))
+                pos.x -= gostupid() * cos(radians(yaw))
+                pos.z += gostupid() * sin(radians(yaw))
+                pos.x += gostupid() * cos(radians(yaw))
+                move = True
+            if input.wasPressedSinceLast(input.KEY_S):
+                pos.z += gostupid() * sin(radians(yaw))
+                pos.x += gostupid() * cos(radians(yaw))
+                pos.z -= gostupid() * sin(radians(yaw))
+                pos.x -= gostupid() * cos(radians(yaw))
+                move = True
+            if input.wasPressedSinceLast(input.KEY_D):
+                pos.x += gostupid() * -sin(radians(yaw))
+                pos.z += gostupid() * cos(radians(yaw))
+                pos.x -= gostupid() * -sin(radians(yaw))
+                pos.z -= gostupid() * cos(radians(yaw))
+                move = True
+            if input.wasPressedSinceLast(input.KEY_A):
+                pos.x -= gostupid() * -sin(radians(yaw))
+                pos.z -= gostupid() * cos(radians(yaw))
+                pos.x += gostupid() * -sin(radians(yaw))
+                pos.z += gostupid() * cos(radians(yaw))
+                move = True
+            if input.wasPressedSinceLast(input.SPACE):
+                posorneg = random.randint(1,2)
+                if posorneg == 1:
+                    pos.y += gostupid()
+                else:
+                    pos.y -= gostupid()
+                move = True
+            if move:
+                try:
+                    mc.entity.setPos(player,pos)
+                except:
+                    mc.postToChat("Error with "+modulenm)
 
 
 if __name__ == '__main__':

@@ -9,9 +9,8 @@ import keyboard
 
 def Main():
     mc = Minecraft()
-    modulenm = "PlayerTracker"
+    modulenm = "Killaura"
     configs = loadconfig()['modules'][modulenm]
-    TrackerFreq = configs['playertrackerfreq']
     whichEntity = 0
     while True:
         if keyboard.is_pressed('r'):
@@ -38,7 +37,7 @@ def Main():
                 lowestdistanceguy, dista = lowestdistuple
             except:
                 continue
-
+            
             if player == lowestdistanceguy:
                 continue
             
@@ -72,8 +71,6 @@ def Main():
                 # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
                 # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
-
-        #time.sleep(TrackerFreq)
 
 if __name__ == '__main__':
     Main()

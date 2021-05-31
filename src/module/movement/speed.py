@@ -13,8 +13,11 @@ def Main():
     moveamount = configs['travelspeed']
 
     while True:
-        pos = mc.entity.getPos(player)
-        yaw = mc.entity.getRotation(player)
+        try:
+            pos = mc.entity.getPos(player)
+            yaw = mc.entity.getRotation(player)
+        except:
+            continue
         move = False
         if input.wasPressedSinceLast(input.UP):
             pos.x += moveamount * -sin(radians(yaw))

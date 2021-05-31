@@ -17,106 +17,136 @@ class Ui_EclientGUI(object):
         EclientGUI.resize(1399, 900)
         self.centralwidget = QtWidgets.QWidget(EclientGUI)
         self.centralwidget.setObjectName("centralwidget")
+
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 70, 160, 771))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+
         self.movementContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.movementContainer.setContentsMargins(0, 0, 0, 0)
         self.movementContainer.setObjectName("movementContainer")
+
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(220, 70, 160, 771))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
+
         self.miscContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.miscContainer.setContentsMargins(0, 0, 0, 0)
         self.miscContainer.setObjectName("miscContainer")
+
         self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(420, 70, 160, 771))
         self.verticalLayoutWidget_3.setObjectName("verticalLayoutWidget_3")
+
         self.chatContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.chatContainer.setContentsMargins(0, 0, 0, 0)
         self.chatContainer.setObjectName("chatContainer")
+
         self.verticalLayoutWidget_4 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(620, 70, 160, 771))
         self.verticalLayoutWidget_4.setObjectName("verticalLayoutWidget_4")
+
         self.combatContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_4)
         self.combatContainer.setContentsMargins(0, 0, 0, 0)
         self.combatContainer.setObjectName("combatContainer")
+
         self.verticalLayoutWidget_5 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_5.setGeometry(QtCore.QRect(820, 70, 160, 771))
         self.verticalLayoutWidget_5.setObjectName("verticalLayoutWidget_5")
+        
         self.playerContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_5)
         self.playerContainer.setContentsMargins(0, 0, 0, 0)
         self.playerContainer.setObjectName("playerContainer")
+
         self.verticalLayoutWidget_6 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_6.setGeometry(QtCore.QRect(1020, 70, 160, 771))
         self.verticalLayoutWidget_6.setObjectName("verticalLayoutWidget_6")
+
         self.renderContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_6)
         self.renderContainer.setContentsMargins(0, 0, 0, 0)
         self.renderContainer.setObjectName("renderContainer")
+
         self.verticalLayoutWidget_7 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_7.setGeometry(QtCore.QRect(1220, 70, 160, 771))
         self.verticalLayoutWidget_7.setObjectName("verticalLayoutWidget_7")
+
         self.statisticalContainer = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_7)
         self.statisticalContainer.setContentsMargins(0, 0, 0, 0)
         self.statisticalContainer.setObjectName("statisticalContainer")
+
         self.line1 = QtWidgets.QFrame(self.centralwidget)
         self.line1.setGeometry(QtCore.QRect(190, 70, 20, 811))
         self.line1.setFrameShape(QtWidgets.QFrame.VLine)
         self.line1.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line1.setObjectName("line1")
+
         self.line2 = QtWidgets.QFrame(self.centralwidget)
         self.line2.setGeometry(QtCore.QRect(390, 70, 20, 811))
         self.line2.setFrameShape(QtWidgets.QFrame.VLine)
         self.line2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line2.setObjectName("line2")
+
         self.line3 = QtWidgets.QFrame(self.centralwidget)
         self.line3.setGeometry(QtCore.QRect(590, 70, 20, 811))
         self.line3.setFrameShape(QtWidgets.QFrame.VLine)
         self.line3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line3.setObjectName("line3")
+
         self.line4 = QtWidgets.QFrame(self.centralwidget)
         self.line4.setGeometry(QtCore.QRect(790, 70, 20, 811))
         self.line4.setFrameShape(QtWidgets.QFrame.VLine)
         self.line4.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line4.setObjectName("line4")
+
         self.line5 = QtWidgets.QFrame(self.centralwidget)
         self.line5.setGeometry(QtCore.QRect(990, 70, 20, 811))
         self.line5.setFrameShape(QtWidgets.QFrame.VLine)
         self.line5.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line5.setObjectName("line5")
+
         self.line6 = QtWidgets.QFrame(self.centralwidget)
         self.line6.setGeometry(QtCore.QRect(1190, 70, 20, 811))
         self.line6.setFrameShape(QtWidgets.QFrame.VLine)
         self.line6.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line6.setObjectName("line6")
+
         self.movementLabel = QtWidgets.QLabel(self.centralwidget)
         self.movementLabel.setGeometry(QtCore.QRect(70, 20, 51, 16))
         self.movementLabel.setObjectName("movementLabel")
+
         self.miscLabel = QtWidgets.QLabel(self.centralwidget)
         self.miscLabel.setGeometry(QtCore.QRect(290, 20, 21, 16))
         self.miscLabel.setObjectName("miscLabel")
+
         self.chatLabel = QtWidgets.QLabel(self.centralwidget)
         self.chatLabel.setGeometry(QtCore.QRect(480, 20, 31, 16))
         self.chatLabel.setObjectName("chatLabel")
+
         self.combatLabel = QtWidgets.QLabel(self.centralwidget)
         self.combatLabel.setGeometry(QtCore.QRect(680, 20, 41, 20))
         self.combatLabel.setObjectName("combatLabel")
+
         self.playerLabel = QtWidgets.QLabel(self.centralwidget)
         self.playerLabel.setGeometry(QtCore.QRect(880, 20, 41, 20))
         self.playerLabel.setObjectName("playerLabel")
+
         self.renderLabel = QtWidgets.QLabel(self.centralwidget)
         self.renderLabel.setGeometry(QtCore.QRect(1080, 20, 41, 20))
         self.renderLabel.setObjectName("renderLabel")
+
         self.statisticalLabel = QtWidgets.QLabel(self.centralwidget)
         self.statisticalLabel.setGeometry(QtCore.QRect(1270, 24, 61, 20))
         self.statisticalLabel.setObjectName("statisticalLabel")
+
         EclientGUI.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(EclientGUI)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1399, 21))
         self.menubar.setObjectName("menubar")
+
         EclientGUI.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(EclientGUI)
         self.statusbar.setObjectName("statusbar")
+        
         EclientGUI.setStatusBar(self.statusbar)
 
         self.retranslateUi(EclientGUI)

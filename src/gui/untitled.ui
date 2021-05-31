@@ -20,10 +20,74 @@
       <x>20</x>
       <y>70</y>
       <width>160</width>
-      <height>771</height>
+      <height>181</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="movementContainer"/>
+    <layout class="QVBoxLayout" name="movementContainer">
+     <item>
+      <widget class="QPushButton" name="autosprint">
+       <property name="text">
+        <string>Auto Sprint</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="gocrazy">
+       <property name="text">
+        <string>Go Crazy</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Phase">
+       <property name="text">
+        <string>Phase</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="playerfollower">
+       <property name="text">
+        <string>Player Follower</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="speed">
+       <property name="text">
+        <string>Speed</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
@@ -31,10 +95,32 @@
       <x>220</x>
       <y>70</y>
       <width>160</width>
-      <height>771</height>
+      <height>61</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="miscContainer"/>
+    <layout class="QVBoxLayout" name="miscContainer">
+     <item>
+      <widget class="QPushButton" name="playertracker">
+       <property name="text">
+        <string>Player Tracker</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="privateserverfinder">
+       <property name="text">
+        <string>Private Server Finder</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
@@ -42,10 +128,18 @@
       <x>420</x>
       <y>70</y>
       <width>160</width>
-      <height>771</height>
+      <height>31</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="chatContainer"/>
+    <layout class="QVBoxLayout" name="chatContainer">
+     <item>
+      <widget class="QPushButton" name="chatlogger">
+       <property name="text">
+        <string>Chat Logger</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_4">
     <property name="geometry">
@@ -53,10 +147,32 @@
       <x>620</x>
       <y>70</y>
       <width>160</width>
-      <height>771</height>
+      <height>61</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="combatContainer"/>
+    <layout class="QVBoxLayout" name="combatContainer">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Killaura</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="strafeaura">
+       <property name="text">
+        <string>Strafeaura</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_5">
     <property name="geometry">
@@ -86,10 +202,32 @@
       <x>1220</x>
       <y>70</y>
       <width>160</width>
-      <height>771</height>
+      <height>61</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="statisticalContainer"/>
+    <layout class="QVBoxLayout" name="statisticalContainer">
+     <item>
+      <widget class="QPushButton" name="keymapper">
+       <property name="text">
+        <string>Keymapper</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="movementlogger">
+       <property name="text">
+        <string>Movement Logger</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="Line" name="line1">
     <property name="geometry">

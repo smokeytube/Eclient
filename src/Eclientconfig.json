@@ -41,14 +41,14 @@
       "Name": "PrivateServerFinder"
     },
     "Phase": {
-      "phaseamount": 5,
+      "phaseamount": 3,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,
       "Name": "Phase"
     },
     "GoCrazy": {
-      "crazyamount": 3,
+      "crazyamount": 2,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": true,
@@ -75,7 +75,7 @@
       "Name": "ChatLogger"
     },
     "Speed": {
-      "travelspeed": 0.2,
+      "travelspeed": 2,
       "Bind": "None",
       "Visible": "ON",
       "Enabled": false,
