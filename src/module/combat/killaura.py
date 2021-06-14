@@ -10,7 +10,7 @@ import keyboard
 def Main():
     mc = Minecraft()
     modulenm = "Killaura"
-    configs = loadconfig()['modules'][modulenm]
+    #configs = loadconfig()['modules'][modulenm]
     whichEntity = 0
     while True:
         if keyboard.is_pressed('r'):
