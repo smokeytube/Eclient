@@ -10,7 +10,9 @@ import keyboard
 def Main():
     mc = Minecraft()
     modulenm = "Killaura"
-    #configs = loadconfig()['modules'][modulenm]
+    configs = loadconfig()['modules'][modulenm]
+    cps = 1/int(configs['cps'])
+    mode = configs['mode']
     whichEntity = 0
     while True:
         if keyboard.is_pressed('r'):
@@ -68,8 +70,11 @@ def Main():
             elif distance > 0.2 and distance < 4:
                 mc.entity.setRotation(player, newyaw-90)
                 mc.entity.setPitch(player, newpitch)
-                # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
-                # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
+                if mode == 'pre':
+                    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
+                    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
+            
+            time.sleep(cps)
 
 
 if __name__ == '__main__':

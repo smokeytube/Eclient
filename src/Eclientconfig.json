@@ -1,3 +1,4 @@
+//kami blue json :troll:
 {
   "binds": {
     "modifiersEnabled": false
@@ -6,78 +7,62 @@
     "MovementLogger": {
       "loggingfreq": 0.1,
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "MovementLogger"
     },
     "KeyMapper": {
-      "sleep": 10,
+      "sleep": 10, //miliseconds
       "outputfile": "keymap.txt",
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "KeyMapper"
-    },
-    "ZeroWaitForYou": {
-      "join_time": "13:30",
-      "discord_tag": "<@773984010049028096>",
-      "discord_webhook": "https://discord.com/api/webhooks/819561851281080360/KO3pMlLuNqc3LpJCzQ_K0m3BlPlG_YEvUKFWQe0eaJTTIFVFtifHWlo_xSRIjyT9ys-i",
-      "disconnect_at_certian_position": "yes",
-      "warning_position": 50,
-      "sound_warning": "no",
-      "disconnect_position": 5,
-      "reconnect": "yes",
-      "time_between_reconnects": 60,
-      "Bind": "None",
-      "Visible": "ON",
-      "Enabled": true,
-      "Name": "ZeroWaitForYou"
     },
     "PrivateServerFinder": {
       "halfip": "51.81.171.",
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": false,
       "Name": "PrivateServerFinder"
     },
     "Phase": {
       "phaseamount": 3,
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "Phase"
     },
     "GoCrazy": {
       "crazyamount": 2,
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "GoCrazy"
     },
     "AutoSprint": {
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": false,
       "Name": "AutoSprint"
     },
     "PlayerTracker": {
       "playertrackerfreq": 3,
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "PlayerTracker"
     },
     "ChatLogger": {
-      "webhook": "https://discord.com/api/webhooks/819561851281080360/KO3pMlLuNqc3LpJCzQ_K0m3BlPlG_YEvUKFWQe0eaJTTIFVFtifHWlo_xSRIjyT9ys-i",
+      "webhook": "",
       "Bind": "None",
-      "Visible": "ON",
       "Enabled": true,
       "Name": "ChatLogger"
+    },
+    "Killaura": {
+      "mode": "post", //mode pre and post for pre 1.9 and post 1.9
+      "cps": 5,
+      "Bind": "None",
+      "Enabled": true,
+      "Name": "Killaura"
     },
     "Speed": {
       "travelspeed": 2,
       "Bind": "None",
-      "Visible": "ON",
+      
       "Enabled": false,
       "Name": "Speed"
     }
