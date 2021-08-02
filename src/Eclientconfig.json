@@ -1,4 +1,3 @@
-//kami blue json :troll:
 {
   "binds": {
     "modifiersEnabled": false
@@ -11,7 +10,7 @@
       "Name": "MovementLogger"
     },
     "KeyMapper": {
-      "sleep": 10, //miliseconds
+      "sleep": 10,
       "outputfile": "keymap.txt",
       "Bind": "None",
       "Enabled": true,
@@ -53,7 +52,7 @@
       "Name": "ChatLogger"
     },
     "Killaura": {
-      "mode": "post", //mode pre and post for pre 1.9 and post 1.9
+      "mode": "post",
       "cps": 5,
       "Bind": "None",
       "Enabled": true,

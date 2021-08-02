@@ -1,5 +1,4 @@
 # /py src/module/movement/gocrazy
-
 import input as input
 from mine import *
 from mcpi.minecraft import *
