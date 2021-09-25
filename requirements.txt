@@ -1,1 +1,4 @@
 keyboard
+pywin32
+asyncio-dgram
+dnspython

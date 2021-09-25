@@ -23,9 +23,9 @@ def Main():
 
     print(x, y, z)
 
-    xrange = 20
-    yrange = 15
-    zrange = 20
+    xrange = 30
+    yrange = 40
+    zrange = 30
 
     for i in range(x-xrange,x+xrange):
         for ii in range(y-yrange,y+yrange):
@@ -42,7 +42,7 @@ def Main():
                     pass
                 else:
                     movelog.write('{}|{}|{}|{}\n'.format(i-x, ii-y, iii-z, block))
-                #print('{} {} {}:{}\n'.format(i, ii, iii, block))
+                print('{} {} {}:{}\n'.format(i, ii, iii, block))
 
                 movelogtimeout += 1
 
